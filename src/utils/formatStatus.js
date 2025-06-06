@@ -1,6 +1,6 @@
 export default function formatStatus(
   status,
-  runLevelName = "UNKNOWN",
+  runLevelName = 'UNKNOWN',
   runLevelCode = null,
   uptimeSeconds = null,
   runLevelOrdinal = null

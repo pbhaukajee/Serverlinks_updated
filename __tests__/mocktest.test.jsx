@@ -1,5 +1,6 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Page from '../app/page';
+import Page from '../src/app/page';
 
 test('renders Hello World', () => {
   render(<Page />);
