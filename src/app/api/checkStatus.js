@@ -1,6 +1,6 @@
 import formatStatus from '../../utils/formatStatus';
 
-export default async function CheckStatus(url) {
+export default async function checkStatus(url) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 5000);
 
@@ -24,7 +24,7 @@ export default async function CheckStatus(url) {
 
     try {
       data = JSON.parse(text);
-      console.log('data: ', data);
+      // console.log('data: ', data);
     } catch {
       return formatStatus('FAILED TO START');
     }
@@ -57,7 +57,7 @@ export default async function CheckStatus(url) {
       ),
     };
   } catch {
-    console.log('fetch failed');
+    // console.log('fetch failed');
     return formatStatus('DOWN');
   }
 }
