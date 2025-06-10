@@ -55,6 +55,7 @@ export default async function checkStatus(url) {
         uptimeSeconds,
         runLevelOrdinal
       ),
+      serverName: url.includes('cm-') ? 'AB' : 'OTHER',
     };
   } catch {
     // console.log('fetch failed');
