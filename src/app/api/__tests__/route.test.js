@@ -23,7 +23,7 @@ vi.mock('../../../utils/environments', () => ({
   ],
 }));
 
-import { GET } from './route';
+import { GET } from '../serverStatus/route';
 
 describe('GET API route', () => {
   it('returns 200 if everything is ok', async () => {

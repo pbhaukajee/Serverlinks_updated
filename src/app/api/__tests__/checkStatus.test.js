@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import checkStatus from './checkStatus';
+import checkStatus from '../checkStatus';
 // import formatStatus from '../../utils/formatStatus';
 
 // Mock formatStatus to just return an object with the status

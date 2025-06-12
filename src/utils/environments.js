@@ -11,7 +11,7 @@ export const environments = [
     },
   },
   {
-    envName: 'Dev4 (Time Travel - Manual Testing)',
+    envName: 'Dev4',
     servers: {
       PC: process.env.DEV4_PC,
       BC: process.env.DEV4_BC,
@@ -20,7 +20,7 @@ export const environments = [
     },
   },
   {
-    envName: 'Dev5 (Actual Time - Automated Testing)',
+    envName: 'Dev5',
     servers: {
       PC: process.env.DEV5_PC,
       BC: process.env.DEV5_BC,
@@ -29,7 +29,7 @@ export const environments = [
     },
   },
   {
-    envName: 'Dev6 (Time Travel - Automated Testing)',
+    envName: 'Dev6',
     servers: {
       PC: process.env.DEV6_PC,
       BC: process.env.DEV6_BC,
@@ -38,8 +38,7 @@ export const environments = [
     },
   },
   {
-    envName:
-      'QA - THIS IS THE HOME FOR CC (if you need to test QA CC use this PC instance)',
+    envName: 'QA',
     servers: {
       PC: process.env.QA_PC,
       BC: process.env.QA_BC,
@@ -48,7 +47,7 @@ export const environments = [
     },
   },
   {
-    envName: 'SIT  ImageRight doesn’t work in SIT (No License)',
+    envName: 'SIT',
     servers: {
       PC: process.env.SIT_PC,
       BC: process.env.SIT_BC,
