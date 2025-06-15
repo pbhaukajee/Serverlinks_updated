@@ -1,5 +1,3 @@
-// console.log("ENV DEV_PC:", process.env.DEV_PC);
-
 export const environments = [
   {
     envName: 'Dev',

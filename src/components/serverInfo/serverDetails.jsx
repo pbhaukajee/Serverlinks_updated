@@ -1,10 +1,17 @@
+'use client';
+
 import { useState } from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import formatUptime from '../../utils/formatUptime';
+import envLinks from '../../utils/environmentLinks';
 
 export default function ServerDetails({ server, info }) {
   const [showDetails, setShowDetails] = useState(false);
   const status = (info?.status || 'down').trim().toLowerCase();
+  const envName = info?.envName?.toUpperCase();
+  const serverKey = `${envName}_${server}_URL`;
+  const serverURL = envLinks[serverKey];
+  // console.log(serverURL);
 
   const getStatusStyles = (status) => {
     switch (status) {
@@ -37,9 +44,22 @@ export default function ServerDetails({ server, info }) {
           mb: 1,
         }}
       >
-        <Typography color="rgb(0, 48, 94)" sx={{ fontWeight: 600 }}>
-          {server}
-        </Typography>
+        {serverURL ? (
+          <a
+            href={serverURL}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: 'none' }}
+          >
+            <Typography color="rgb(0, 48, 94)" sx={{ fontWeight: 600 }}>
+              {server}
+            </Typography>
+          </a>
+        ) : (
+          <Typography color="rgb(0, 48, 94)" sx={{ fontWeight: 600 }}>
+            {server}
+          </Typography>
+        )}
 
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           <Box
